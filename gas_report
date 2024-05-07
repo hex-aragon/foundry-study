@@ -1,0 +1,24 @@
+No files changed, compilation skipped
+
+Ran 4 tests for test/Counter.t.sol:CounterTest
+[FAIL. Reason: assertion failed: 1 != 10] testDec() (gas: 106092)
+[PASS] testDecUnderflow() (gas: 32093)
+[PASS] testFailDec() (gas: 28699)
+[PASS] testInc() (gas: 52381)
+Suite result: FAILED. 3 passed; 1 failed; 0 skipped; finished in 760.78µs (776.76µs CPU time)
+| src/Counter.sol:Counter contract | | | | | |
+|----------------------------------|-----------------|-------|--------|-------|---------|
+| Deployment Cost | Deployment Size | | | | |
+| 112809 | 306 | | | | |
+| Function Name | min | avg | median | max | # calls |
+| count | 261 | 261 | 261 | 261 | 2 |
+| dec | 23458 | 24422 | 23458 | 26352 | 3 |
+| inc | 26308 | 37708 | 43408 | 43408 | 3 |
+
+Ran 1 test suite in 5.59ms (760.78µs CPU time): 3 tests passed, 1 failed, 0 skipped (4 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/Counter.t.sol:CounterTest
+[FAIL. Reason: assertion failed: 1 != 10] testDec() (gas: 106092)
+
+Encountered a total of 1 failing tests, 3 tests succeeded

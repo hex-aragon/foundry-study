@@ -1,0 +1,30 @@
+No files changed, compilation skipped
+
+Ran 4 tests for test/Counter.t.sol:CounterTest
+[FAIL. Reason: assertion failed: 1 != 10] testDec() (gas: 33300)
+Traces:
+  [33300] CounterTest::testDec()
+    ├─ [22344] Counter::inc()
+    │   └─ ← [Stop] 
+    ├─ [444] Counter::inc()
+    │   └─ ← [Stop] 
+    ├─ [488] Counter::dec()
+    │   └─ ← [Stop] 
+    ├─ [261] Counter::count() [staticcall]
+    │   └─ ← [Return] 1
+    ├─ [0] VM::assertEq(1, 10) [staticcall]
+    │   └─ ← [Revert] assertion failed: 1 != 10
+    └─ ← [Revert] assertion failed: 1 != 10
+
+[PASS] testDecUnderflow() (gas: 11029)
+[PASS] testFailDec() (gas: 7635)
+[PASS] testInc() (gas: 31317)
+Suite result: FAILED. 3 passed; 1 failed; 0 skipped; finished in 564.86µs (332.86µs CPU time)
+
+Ran 1 test suite in 4.60ms (564.86µs CPU time): 3 tests passed, 1 failed, 0 skipped (4 total tests)
+
+Failing tests:
+Encountered 1 failing test in test/Counter.t.sol:CounterTest
+[FAIL. Reason: assertion failed: 1 != 10] testDec() (gas: 33300)
+
+Encountered a total of 1 failing tests, 3 tests succeeded
